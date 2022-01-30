@@ -1,47 +1,47 @@
-ŽQl
+å‚è€ƒ
 https://qiita.com/yasomaru/items/fa708a1f21a79e637868
 
- AWS CLI ƒCƒ“ƒXƒg[ƒ‹
+â–¡AWS CLI ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 $ sudo apt-get update
 $ sudo apt install awscli
 $ aws --version
 
- LocalStack—pAWSƒvƒƒtƒ@ƒCƒ‹ì¬idummyj
+â–¡LocalStackç”¨AWSãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ä½œæˆï¼ˆdummyï¼‰
 region : ap-northeast-1
 format : json
-‘¼ F dummy
+ä»– ï¼š dummy
 
- git fork
-¦GitHubƒpƒuƒŠƒbƒN¨Githubƒvƒ‰ƒCƒx[ƒg
+â–¡git fork
+â€»GitHubãƒ‘ãƒ–ãƒªãƒƒã‚¯â†’Githubãƒ—ãƒ©ã‚¤ãƒ™ãƒ¼ãƒˆ
 https://github.com/Shika9/localstack.git
 
- git clone
+â–¡git clone
 $ git clone https://github.com/Shika9/localstack.git
 
- docker-compose.yml‚É’Ç‹L
+â–¡docker-compose.ymlã«è¿½è¨˜
 - LAMBDA_DOCKER_NETWORK=host
 - LAMBDA_EXECUTOR=docker-reuse
 
-¡LocalStack‹N“®
+â– LocalStackèµ·å‹•
 $ docker-compose up -d
 
-¡‹N“®Šm”F
+â– èµ·å‹•ç¢ºèª
 http://localhost:4566/health
 
-¦awsƒT[ƒrƒX‚ðLocal‚ÅŽÀs‰Â”\‚Æ‚È‚é
+â€»awsã‚µãƒ¼ãƒ“ã‚¹ã‚’Localã§å®Ÿè¡Œå¯èƒ½ã¨ãªã‚‹
 
-¡LocalStack’âŽ~  xxxxxxxxxxx:ƒRƒ“ƒeƒiID
+â– LocalStackåœæ­¢  xxxxxxxxxxx:ã‚³ãƒ³ãƒ†ãƒŠID
 $ docker ps
 $ docker stop xxxxxxxxxxx
 
-¡LocalStackíœ
+â– LocalStackå‰Šé™¤
 $ docker ps -a
 $ docker rm xxxxxxxxxxx
 $ docker ps -a
 
-¡UbuntuƒƒOƒAƒEƒg
+â– Ubuntuãƒ­ã‚°ã‚¢ã‚¦ãƒˆ
 $ exit
 
-¡wsl2ƒVƒƒƒbƒgƒ_ƒEƒ“@(powershell‚ÅŽÀs)
+â– wsl2ã‚·ãƒ£ãƒƒãƒˆãƒ€ã‚¦ãƒ³ã€€(powershellã§å®Ÿè¡Œ)
 > wsl -l -v
 > wsl --shutdown
