@@ -1,0 +1,47 @@
+参考
+https://qiita.com/yasomaru/items/fa708a1f21a79e637868
+
+□AWS CLI インストール
+$ sudo apt-get update
+$ sudo apt install awscli
+$ aws --version
+
+□LocalStack用AWSプロファイル作成（dummy）
+region : ap-northeast-1
+format : json
+他 ： dummy
+
+□git fork
+※GitHubパブリック→Githubプライベート
+https://github.com/Shika9/localstack.git
+
+□git clone
+$ git clone https://github.com/Shika9/localstack.git
+
+□docker-compose.ymlに追記
+- LAMBDA_DOCKER_NETWORK=host
+- LAMBDA_EXECUTOR=docker-reuse
+
+■LocalStack起動
+$ docker-compose up -d
+
+■起動確認
+http://localhost:4566/health
+
+※awsサービスをLocalで実行可能となる
+
+■LocalStack停止  xxxxxxxxxxx:コンテナID
+$ docker ps
+$ docker stop xxxxxxxxxxx
+
+■LocalStack削除
+$ docker ps -a
+$ docker rm xxxxxxxxxxx
+$ docker ps -a
+
+■Ubuntuログアウト
+$ exit
+
+■wsl2シャットダウン　(powershellで実行)
+> wsl -l -v
+> wsl --shutdown
